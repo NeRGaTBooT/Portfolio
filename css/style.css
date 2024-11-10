@@ -1,0 +1,247 @@
+*{
+    outline: none;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin-top: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    line-height: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    padding: 100px 0;
+}
+
+:root {
+    --color-theme-dark: #111111; 
+    --color-theme-light: #f3f3f3;
+    --color-accent: #FFB400;
+    --color-accent-hover: #e09d00;
+    --color-text-desc: #4E4E4E;
+    --color-text: #2A211F;
+    --color-btn-text: #fff;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 0 20px; /* Отступы внутри контейнера */
+}
+
+body{
+    font-size: 16px;
+    color: var(--color-text);
+    background-color: var(--color-theme-light);
+}
+
+body a{
+    color: var(--color-text);
+}
+
+/* 
+=============================================================
+HEADER
+=============================================================
+*/
+
+
+
+.header{
+    border-bottom: 1px solid var(--color-accent);
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    background-color: var(--color-theme-light);
+}
+
+.burger {
+    display: none; /* Скрыть бургер-меню по умолчанию */
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.burger-icon {
+    outline: none; /* Убираем стандартное выделение при нажатии */
+
+}
+
+.burger img {
+    width: 25px;
+    height: 25px;
+    margin: 4px 0;
+}
+
+.header_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    text-transform: uppercase;
+}
+
+.main_menu ul, .dop_menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.main_menu ul a{
+    font-weight: 500;
+    transition: all ease .3s;
+}
+
+.main_menu ul li a:hover{
+    color: var(--color-accent);
+}
+
+.dop_menu img{
+    width: 18px;
+    height: 18px;
+}
+
+.dop_menu ul li:first-child{
+    height: 18px;
+    width: 18px;
+}
+
+.dop_menu ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 
+=============================================================
+ABOUT
+=============================================================
+*/
+
+.section_title{
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    z-index: 999;
+}
+
+.section_title h2 span{
+    color: var(--color-accent);
+}
+
+.section_title_after{
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: .1;
+}
+
+.section_minor_title{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.section_about_body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section_about_body_left, .section_about_body_right{
+    flex: 1;
+    flex-basis: 50%;
+}
+
+.about_body_left_list{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.about_body_left_list ul li{
+    margin-bottom: 10px;
+}
+
+.about_body_left_list ul li:last-child{
+    margin-bottom: 0;
+}
+
+.about_body_left_list span {
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+.section_about_body_right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about_body_right_items{
+    border: 1px solid var(--color-accent);
+    flex: 1 1 200px;
+    padding: 20px;
+}
+
+.about_body_right_items_head{
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+.about_body_right_items_body{
+    font-size: 20px;
+    padding-left: 50px;
+}
+
+.about_body_right_items_body::before{
+    content: "";
+    display: flex;
+    position: relative;
+    top: 14px;
+    left: -50px;
+    height: 2px;
+    width: 35px;
+    background-color: var(--color-accent);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn_main{
+    display: inline-flex;
+    background-color: var(--color-accent);
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: var(--color-btn-text);
+    transition: all ease .3s;
+}
+
+.btn_main:hover{
+    background-color: var(--color-accent-hover);
+}
