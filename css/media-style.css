@@ -1,0 +1,77 @@
+/* Стили для мобильной версии */
+@media (max-width: 1140px) {
+    .main_menu {
+        display: none; /* Скрыть навигацию по умолчанию */
+        width: 100%;
+        background-color: #282828; /* Цвет фона меню */
+        position: absolute;
+        top: 55px; /* Позиция меню под хедером */
+        left: 0;
+        z-index: 10;
+        transform: translateX(-1000px); /* Начальное смещение */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Плавный переход */
+    }
+
+    .main_menu ul{
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .main_menu ul li a{
+        color: #fff;
+    }
+
+    .main_menu.active {
+        display: block; /* Показать меню при активации */
+        opacity: 1; /* Полная непрозрачность */
+        transform: translateX(0); /* Возвращаем в исходное положение */
+        align-items: baseline;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .burger {
+        display: flex; /* Показать бургер-меню на мобильных устройствах */
+    }
+
+    .nav-list {
+        flex-direction: column; /* Вертикальное расположение пунктов меню */
+        padding: 10px 0; /* Отступы */
+    }
+
+    .nav-list li {
+        text-align: center; /* Центрирование текста */
+        padding: 10px 0; /* Отступы для пунктов меню */
+    }
+
+    
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+    .section_title{
+        font-size: 30px;
+    }
+
+    .section_title_after{
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 425px) {
+    .section_title{
+        font-size: 20px;
+    }
+
+    .section_title_after{
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 375px) {
+
+}

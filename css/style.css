@@ -39,13 +39,15 @@ section{
 
 
 .container {
-    width: 90%;
-    max-width: 1200px; /* Максимальная ширина контейнера */
+    width: 100%;
+    padding: 0 20px;
+    max-width: 1160px; /* Максимальная ширина контейнера */
     margin: 0 auto; /* Центрирование контейнера */
-    padding: 0 20px; /* Отступы внутри контейнера */
 }
 
 body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
     font-size: 16px;
     color: var(--color-text);
     background-color: var(--color-theme-light);
@@ -69,6 +71,9 @@ HEADER
     width: 100%;
     z-index: 99999;
     background-color: var(--color-theme-light);
+    -webkit-box-shadow: 0px 6px 13px 3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 6px 13px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 6px 13px 3px rgba(0, 0, 0, 0.2);
 }
 
 .burger {
@@ -141,7 +146,7 @@ ABOUT
 */
 
 .section_title{
-    font-weight: bold;
+    font-weight: 700;
     font-size: 40px;
     text-transform: uppercase;
     text-align: center;
@@ -149,18 +154,17 @@ ABOUT
     z-index: 999;
 }
 
-.section_title h2 span{
-    color: var(--color-accent);
-}
+
 
 .section_title_after{
+    color: var(--color-accent);
     font-size: 100px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
-    opacity: .1;
+    opacity: .8;
 }
 
 .section_minor_title{
@@ -180,6 +184,7 @@ ABOUT
 .about_body_left_list{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-right: 20px;
     margin-bottom: 20px;
 }
@@ -193,7 +198,7 @@ ABOUT
 }
 
 .about_body_left_list span {
-    font-weight: bold;
+    font-weight: 700;
     color: var(--color-accent);
 }
 
@@ -207,12 +212,23 @@ ABOUT
     border: 1px solid var(--color-accent);
     flex: 1 1 200px;
     padding: 20px;
+    cursor: default;
+    -webkit-box-shadow: 6px 6px 7px 2px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 6px 6px 7px 2px rgba(0, 0, 0, 0.18);
+    box-shadow: 6px 6px 7px 2px rgba(0, 0, 0, 0.18);
+}
+
+.about_body_right_items:hover .about_body_right_items_head{
+    transform: scale(1.2);
 }
 
 .about_body_right_items_head{
+    display: inline-block;
     font-size: 50px;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--color-accent);
+    transition: .3s ease;
+    
 }
 
 .about_body_right_items_body{
@@ -233,7 +249,7 @@ ABOUT
     flex-wrap: wrap;
 }
 
-.btn_main{
+.btn_main, .btn_portfolio{
     display: inline-flex;
     background-color: var(--color-accent);
     padding: 10px 30px;
@@ -242,6 +258,96 @@ ABOUT
     transition: all ease .3s;
 }
 
-.btn_main:hover{
+.btn_main:hover, .btn_portfolio:hover{
     background-color: var(--color-accent-hover);
+}
+
+
+/* 
+=============================================================
+STECK
+=============================================================
+*/
+
+.section_steck_body{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.steck_body_items{
+    flex: 1 1 144px;
+    text-align: center;
+    border: 3px dotted var(--color-accent);
+    padding: 20px 0;
+    cursor: default;
+    transition: .3s ease;
+}
+
+.section_steck_body:hover > :not(:hover){
+    filter: blur(1px);
+    opacity: .5;
+}
+
+
+.steck_body_items img{
+    width: 48px;
+    height: 48px;
+
+}
+
+.section_steck_title{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.section_steck_title span{
+    color: var(--color-accent);
+}
+
+/* 
+=============================================================
+EXPERIENCE
+=============================================================
+*/
+
+
+
+/* 
+=============================================================
+PORTFOLIO
+=============================================================
+*/
+
+.section_portfolio_body{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.portfolio_item{
+    flex: 1 1 500px;
+    border: 2px dotted var(--color-accent);
+    padding: 10px;
+}
+
+.portfolio_item_img{
+    margin-bottom: 10px;
+}
+
+.portfolio_item_title{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.portfolio_item_desc{
+    color: var(--color-text-desc);
+    margin-bottom: 20px;
+}
+
+.btn_portfolio{
+
 }
