@@ -28,7 +28,7 @@
                     </nav>
                     <nav class="dop_menu">
                         <ul>
-                            <li><a href="#"><img src="img/ico/moon.svg" alt="theme"></a></li>
+                            <li><a href="#" id="themeToggle"><img src="img/ico/moon.svg" alt="theme"></a></li>
                             <li>
                                 <select name="langSelect" id="langSelect" class="lang_select">
                                     <option value="ru">RU</option>
@@ -258,12 +258,22 @@
                             </div>
                         <div class="social_body_desc_linkSocial">
                             <ul>
-                                <li><a href="#"></a></li>
-                                <li><a href="#"></a></li>
+                                <li><a href="#"><img src="img/ico_social/brand-github_accent.svg" alt="github"></a></li>
+                                <li><a href="#"><img src="img/ico_social/brand-telegram_accent.svg" alt="telegram"></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="social_body_form"></div>
+                    <div class="social_body_form">
+                        <form action="#">
+                            <div class="input_form_wrap">
+                                <input type="tel" name="name" id="name" placeholder="Ваше имя">
+                                <input type="email" name="email" id="email" placeholder="Ваш email">
+                                <input type="text" name="theme" id="theme" placeholder="Тема письма">
+                            </div>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+                            <input type="submit" class="btn_form" value="Отправить сообщение">
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>

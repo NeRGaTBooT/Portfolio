@@ -18,3 +18,25 @@ burger.addEventListener('click', () => {
         burgerIcon.src = 'img/ico/x.svg'; // Путь к изображению крестика
     }
 });
+
+// смена темы
+
+// Устанавливаем начальную тему при загрузке страницы
+document.addEventListener("DOMContentLoaded", function () {
+    const savedTheme = localStorage.getItem("theme") || "light-theme"; // По умолчанию светлая тема
+    document.body.className = savedTheme; // Устанавливаем сохраненную тему
+  });
+  
+  // Слушатель для переключения темы
+  document.getElementById("themeToggle").addEventListener("click", function () {
+    const currentTheme = document.body.className;
+  
+    // Переключаем тему
+    if (currentTheme === "light-theme") {
+      document.body.className = "dark-theme";
+      localStorage.setItem("theme", "dark-theme"); // Сохраняем темную тему
+    } else {
+      document.body.className = "light-theme";
+      localStorage.setItem("theme", "light-theme"); // Сохраняем светлую тему
+    }
+  });
